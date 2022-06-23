@@ -1,0 +1,19 @@
+.flexbox {
+  display: flex;
+  --wrap: wrap;
+  flex-wrap: var(--wrap);
+  --dir: row;
+  flex-direction: var(--dir);
+  --inner-spacing: 0;
+  --inner-div-spacing: 0;
+}
+.flexbox * {
+  margin: var(--inner-spacing);
+}
+.flexbox div {
+  margin-right: var(--inner-div-spacing);
+}
+.container {
+  background-color: #f8f8f8;
+  padding: 5px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluent design</title>
+    <link rel="stylesheet" href="../src/fluent.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flexbox container" style="--wrap: wrap; --inner-spacing: 5px">
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-primary" disabled>Primary Disabled</button>
+    </div>
+    <div class="flexbox container" style="--wrap: wrap; --inner-spacing: 5px">
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-secondary" disabled>Secondary Disabled</button>
+    </div>
+    <div class="flexbox container" style="--wrap: wrap; --inner-spacing: 5px">
+      <button class="btn btn-text">Text</button>
+      <button class="btn btn-text" disabled>Text Disabled</button>
+    </div>
+    <div class="flexbox container" style="--wrap: wrap; --dir: column">
+      <p>Link: <a href="#" class="btn btn-link">Click here</a></p>
+      <p>
+        Disabled Link: <a href="#" class="btn btn-link" disabled>Click here</a>
+      </p>
+    </div>
+    <div
+      class="flexbox container"
+      style="padding: 4px; --inner-div-spacing: 4px"
+    >
+      <div class="text-field search-box">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="text-field search-box">
+        <input type="text" placeholder="Search" disabled />
+      </div>
+    </div>
+    <div
+      class="flexbox container"
+      style="padding: 4px; --inner-div-spacing: 4px"
+    >
+      <div class="text-field text-field-underlined search-box">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="text-field text-field-underlined search-box">
+        <input type="text" placeholder="Search" disabled />
+      </div>
+    </div>
+    <div
+      class="flexbox container"
+      style="padding: 4px; --inner-div-spacing: 4px"
+    >
+      <div class="text-field search-box">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="text-field search-box">
+        <input type="text" placeholder="Search" disabled />
+      </div>
+    </div>
+    <script src="../src/fluent.js"></script>
+  </body>
+</html>
