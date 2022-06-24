@@ -29,6 +29,9 @@ document.querySelectorAll(".text-field").forEach((search) => {
     this.remove();
   });
 });
+document.querySelectorAll(".text-field:not(.search-box)").forEach((field) => {
+  field.querySelector(".search-icon").remove();
+});
 document
   .querySelectorAll(".text-field.text-field-underlined")
   .forEach((field) => {

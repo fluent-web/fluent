@@ -36,7 +36,7 @@
     &:active {
       background-color: #005a9e;
     }
-    &:focus {
+    &:focus-visible {
       outline: 1px solid #fff;
       outline-offset: -1px;
       box-shadow: 0 0 0 2px var(--btn-fill);
@@ -59,7 +59,7 @@
     &:active {
       background-color: #edebe9;
     }
-    &:focus {
+    &:focus-visible {
       outline-color: #201f1e;
       outline-offset: -2px;
       box-shadow: 0 0 0 1px #8a8886;
@@ -81,7 +81,7 @@
     &:active {
       background-color: #edebe9;
     }
-    &:focus {
+    &:focus-visible {
       outline: 1px solid #323130;
       outline-offset: -1px;
       color: #201f1e;
@@ -106,7 +106,7 @@
       color: #005a9e;
       text-decoration: underline;
     }
-    &:focus {
+    &:focus-visible {
       outline: 1px solid #323130;
       text-decoration: underline;
     }
