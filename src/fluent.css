@@ -22,7 +22,7 @@
   padding: 6px 20px;
   font-size: var(--btn-size);
   border: 0;
-  border-radius: 2px;
+  border-radius: 4px;
   outline: none;
   font-weight: 600;
   line-height: 20px;
@@ -196,7 +196,7 @@
   background-color: #fff;
   outline: 0;
   border: 1px solid #8a8886;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 400;
   min-width: 300px;
   -webkit-transition: padding 0.15s ease;
@@ -244,51 +244,52 @@
   stroke: #a19f9d;
 }
 
-.text-field.text-field-underlined {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.text-field.has-prefix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #8a8886;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.text-field.text-field-underlined input {
-  background-color: #fff;
+.text-field.has-prefix .prefix {
+  font-size: 14px;
+  padding: 7px 10px;
+  background-color: #f3f2f1;
+  color: #605e5c;
+  display: block;
+}
+
+.text-field.has-prefix input {
+  outline: 0;
   border: 0;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #8a8886;
+  display: block;
   border-radius: 0;
 }
 
-.text-field.text-field-underlined input:hover {
-  border-bottom-color: #201f1e;
+.text-field.has-prefix.focus {
+  border-color: #0078d4;
+  -webkit-box-shadow: 0 0 0 1px #0078d4;
+          box-shadow: 0 0 0 1px #0078d4;
 }
 
-.text-field.text-field-underlined input[disabled] {
-  padding-bottom: 6px;
+.text-field.has-prefix.disabled {
+  border: 0;
   pointer-events: none;
-  background-color: #edebe9;
-  border-color: transparent;
 }
 
-.text-field.text-field-underlined input[disabled]::-webkit-input-placeholder {
+.text-field.has-prefix.disabled input {
+  background-color: #f3f2f1;
+}
+
+.text-field.has-prefix.disabled input::-webkit-input-placeholder {
   color: #a19f9d;
 }
 
-.text-field.text-field-underlined input[disabled] + .search-icon path {
-  stroke: #a19f9d;
-}
-
-.text-field.text-field-underlined .underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1.5px;
-  width: 0%;
-  background-color: #0078d4;
-  -webkit-transition: 0.15s ease;
-  transition: 0.15s ease;
-}
-
-.text-field.text-field-underlined .underline.active {
-  width: 100%;
+.text-field.has-prefix.disabled .prefix {
+  background-color: #f3f2f1;
+  color: #a19f9d;
 }
 /*# sourceMappingURL=fluent.css.map */

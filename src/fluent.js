@@ -55,3 +55,31 @@ document
       }
     });
   });
+document.querySelectorAll(".text-field.has-prefix").forEach((field) => {
+  field.insertAdjacentHTML(
+    "afterbegin",
+    `<label class="prefix">${field.getAttribute("prefix-text")}<label>`
+  );
+  var input = field.querySelector("input");
+  input.addEventListener("click", function () {
+    field.classList.add("focus");
+  });
+  input.addEventListener("blur", function () {
+    field.classList.remove("focus");
+  });
+  input.addEventListener("input", function () {
+    var clear = field.querySelector(".clear-btn");
+    if (clear == null) {
+      return;
+    } else {
+      clear.addEventListener("click", function () {
+        field.classList.add("focus");
+      });
+    }
+  });
+  if (input.hasAttribute("disabled") == true) {
+    field.classList.add("disabled");
+  } else {
+    return;
+  }
+});
