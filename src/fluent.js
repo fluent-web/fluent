@@ -1,3 +1,4 @@
+// text field
 document.querySelectorAll(".text-field").forEach((search) => {
   search.insertAdjacentHTML(
     "beforeend",
@@ -112,4 +113,49 @@ document.querySelectorAll(".text-field.has-suffix").forEach((field) => {
   } else {
     return;
   }
+});
+// dropdown
+document.querySelectorAll(".dropdown").forEach((dropdown) => {
+  var btn = dropdown.querySelector(".dropdown-btn");
+  btn.insertAdjacentHTML(
+    "beforeend",
+    `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="20" class="dropdown-icon">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" d="M112 184l144 144 144-144"/>
+    </svg>
+    `
+  );
+});
+// toggle
+document.querySelectorAll(".toggle").forEach((toggle) => {
+  toggle.insertAdjacentHTML(
+    "beforeend",
+    `
+  <span class="slider">
+    <span class="slider-inner"></span>
+  </span>
+  `
+  );
+  toggle.insertAdjacentHTML(
+    "beforeend",
+    `<label class="toggle-label">${toggle.getAttribute("toggle-label")}</label>`
+  );
+  toggle.querySelector(".slider").addEventListener("click", function () {
+    var check = toggle.querySelector("input[type='checkbox']");
+    if (!check.checked == true) {
+      toggle.querySelector(".slider").classList.add("is-on");
+    } else {
+      return;
+    }
+  });
+});
+document.querySelectorAll(".toggle.is-on").forEach((toggle) => {
+  var check = toggle.querySelector("input[type='checkbox']");
+  var slider = toggle.querySelector(".slider");
+  if (check.hasAttribute("disabled") == false) {
+    slider.click();
+  } else {
+    slider.classList.add("is-disabled-on");
+  }
+  check.checked = true;
 });
