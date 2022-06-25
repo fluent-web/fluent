@@ -146,6 +146,15 @@
     &:active {
       background-color: #edebe9;
     }
+    &:focus-visible {
+      outline: 0;
+      background-color: var(--primary);
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
   }
   &.search-box {
     input {
@@ -196,8 +205,10 @@
       }
     }
   }
-  &.has-prefix {
-    .prefix {
+  &.has-prefix,
+  &.has-suffix {
+    .prefix,
+    .suffix {
       font-size: 14px;
       padding: 7px 10px;
       background-color: #f3f2f1;
@@ -215,6 +226,9 @@
     background-color: #fff;
     border-radius: 4px;
     overflow: hidden;
+    &:hover {
+      border-color: #323130;
+    }
     &.focus {
       border-color: #0078d4;
       box-shadow: 0 0 0 1px #0078d4;
@@ -226,12 +240,22 @@
           color: #a19f9d;
         }
       }
-      .prefix {
+      .prefix,
+      .suffix {
         background-color: #f3f2f1;
         color: #a19f9d;
       }
       border: 0;
       pointer-events: none;
+    }
+  }
+  &.has-suffix {
+    .clear-btn {
+      right: calc(var(--labelWidth) + 6px);
+    }
+    &.focus {
+      border-color: #0078d4;
+      box-shadow: 0 0 0 1px #0078d4;
     }
   }
 }

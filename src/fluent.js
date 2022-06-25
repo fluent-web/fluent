@@ -83,3 +83,33 @@ document.querySelectorAll(".text-field.has-prefix").forEach((field) => {
     return;
   }
 });
+document.querySelectorAll(".text-field.has-suffix").forEach((field) => {
+  field.insertAdjacentHTML(
+    "beforeend",
+    `<label class="suffix">${field.getAttribute("suffix-text")}</label>`
+  );
+  var input = field.querySelector("input");
+  var labelWidth = field.querySelector(".suffix").offsetWidth;
+  field.setAttribute("style", `--labelWidth: ${labelWidth}px;`);
+  input.addEventListener("click", function () {
+    field.classList.add("focus");
+  });
+  input.addEventListener("blur", function () {
+    field.classList.remove("focus");
+  });
+  input.addEventListener("input", function () {
+    var clear = field.querySelector(".clear-btn");
+    if (clear == null) {
+      return;
+    } else {
+      clear.addEventListener("click", function () {
+        field.classList.add("focus");
+      });
+    }
+  });
+  if (input.hasAttribute("disabled") == true) {
+    field.classList.add("disabled");
+  } else {
+    return;
+  }
+});

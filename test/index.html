@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fluent design</title>
-    <link rel="stylesheet" href="../src/fluent.css" />
+    <link rel="stylesheet" href="../src/fluent.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -57,6 +57,36 @@
         <input type="text" name="" id="" placeholder="Placeholder" />
       </div>
       <div class="text-field has-prefix" prefix-text="https://">
+        <input type="text" name="" id="" placeholder="Placeholder" disabled />
+      </div>
+    </div>
+    <div
+      class="flexbox container"
+      style="padding: 4px; --inner-div-spacing: 4px"
+    >
+      <div class="text-field has-suffix" suffix-text=".com">
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </div>
+      <div class="text-field has-suffix" suffix-text=".com">
+        <input type="text" name="" id="" placeholder="Placeholder" disabled />
+      </div>
+    </div>
+    <div
+      class="flexbox container"
+      style="padding: 4px; --inner-div-spacing: 4px"
+    >
+      <div
+        class="text-field has-prefix has-suffix"
+        prefix-text="https://"
+        suffix-text=".com"
+      >
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </div>
+      <div
+        class="text-field has-prefix has-suffix"
+        prefix-text="https://"
+        suffix-text=".com"
+      >
         <input type="text" name="" id="" placeholder="Placeholder" disabled />
       </div>
     </div>
