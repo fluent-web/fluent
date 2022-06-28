@@ -174,3 +174,20 @@ document.querySelectorAll(".checkbox").forEach((check) => {
   `
   );
 });
+// radio
+document.querySelectorAll(".radio").forEach((radio) => {
+  radio.insertAdjacentHTML(
+    "beforeend",
+    `
+  <label class="radio-label">${radio.getAttribute("radio-label")}</label>
+  `
+  );
+});
+document.querySelectorAll(".persona").forEach((persona) => {
+  if (persona.getAttribute("type") == "text") {
+    persona.innerHTML = `
+    ${persona.getAttribute("text")}
+    <div class="status"></div>
+    `;
+  }
+});
