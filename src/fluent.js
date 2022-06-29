@@ -187,7 +187,31 @@ document.querySelectorAll(".persona").forEach((persona) => {
   if (persona.getAttribute("type") == "text") {
     persona.innerHTML = `
     ${persona.getAttribute("text")}
-    <div class="status"></div>
+    <span class="status"></span>
     `;
+  } else if (persona.getAttribute("type") == "image") {
+    persona.setAttribute("style", `--bgImg: ${persona.getAttribute("src")}`);
+  }
+  var status = persona.querySelector(".status");
+  switch (persona.getAttribute("status")) {
+    case "online": {
+      status.classList.add("online");
+      break;
+    }
+    case "away": {
+      status.classList.add("away");
+      break;
+    }
+    case "busy": {
+      status.classList.add("busy");
+      break;
+    }
+    case "offline": {
+      status.classList.add("offline");
+      break;
+    }
+    default: {
+      return;
+    }
   }
 });

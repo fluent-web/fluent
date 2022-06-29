@@ -583,3 +583,96 @@
   }
 }
 // persona
+.persona {
+  &[type="text"],
+  &[type="image"] {
+    --bg: #4f6bed;
+    --fg: #fff;
+    background-color: var(--bg);
+    color: var(--fg);
+    user-select: none;
+    border-radius: 50%;
+    font-size: var(--text-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--outer-size);
+    width: var(--outer-size);
+    font-weight: 600;
+    &[size="xxx-sm"] {
+      --outer-size: 20px;
+      --text-size: 10px;
+      --status-size: 6px;
+    }
+    &[size="xx-sm"] {
+      --outer-size: 24px;
+      --text-size: 10px;
+      --status-size: 8px;
+    }
+    &[size="x-sm"] {
+      --outer-size: 28px;
+      --text-size: 10px;
+      --status-size: 8px;
+    }
+    &[size="sm"] {
+      --outer-size: 32px;
+      --text-size: 14px;
+      --status-size: 10px;
+    }
+    &[size="md"] {
+      --outer-size: 40px;
+      --text-size: 16px;
+      --status-size: 12px;
+    }
+    &[size="x-md"] {
+      --outer-size: 48px;
+      --text-size: 20px;
+      --status-size: 14px;
+    }
+    &[size="lg"] {
+      --outer-size: 60px;
+      --text-size: 22px;
+      --status-size: 20px;
+    }
+    &[size="x-lg"] {
+      --outer-size: 72px;
+      --text-size: 28px;
+      --status-size: 26px;
+    }
+    &[size="xx-lg"] {
+      --outer-size: 100px;
+      --text-size: 42px;
+      --status-size: 30px;
+    }
+    &[size="xxx-lg"] {
+      --outer-size: 120px;
+      --text-size: 42px;
+      --status-size: 36px;
+    }
+    position: relative;
+    .status {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(2px, 2px);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #fff;
+      height: var(--status-size);
+      width: var(--status-size);
+      &.online {
+        background-color: #6bb700;
+      }
+      &.away {
+        background-color: #ffaa44;
+      }
+      &.busy {
+        background-color: #c50f1f;
+      }
+      &.offline {
+        background-color: #fff;
+        box-shadow: 0 0 0 2px #fff, inset 0 0 0 1px #8a8886;
+      }
+    }
+  }
+}
