@@ -191,6 +191,10 @@ document.querySelectorAll(".persona").forEach((persona) => {
     `;
   } else if (persona.getAttribute("type") == "image") {
     persona.setAttribute("style", `--bgImg: ${persona.getAttribute("src")}`);
+    persona.innerHTML = `
+    <img src="${persona.getAttribute("src")}" class="persona-img">
+    <span class="status"></span>
+    `;
   }
   var status = persona.querySelector(".status");
   switch (persona.getAttribute("status")) {
@@ -214,4 +218,25 @@ document.querySelectorAll(".persona").forEach((persona) => {
       return;
     }
   }
+});
+// pivot
+document.querySelectorAll(".pivot").forEach((pivot) => {
+  var items = pivot.querySelectorAll(".pivot-btn");
+  var panes = pivot.querySelectorAll(".pivot-item");
+  var mark = document.createElement("div");
+  mark.classList.add("mark");
+  pivot.querySelector(".pivot-btn.is-active").appendChild(mark);
+  items.forEach((item, index) => {
+    var pane = panes[index];
+    item.addEventListener("click", function () {
+      pivot.querySelector(".pivot-btn.is-active").removeChild(mark);
+      pivot.querySelector(".pivot-btn.is-active").classList.remove("is-active");
+      pivot
+        .querySelector(".pivot-item.is-active")
+        .classList.remove("is-active");
+      this.classList.add("is-active");
+      this.appendChild(mark);
+      pane.classList.add("is-active");
+    });
+  });
 });

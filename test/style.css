@@ -15,5 +15,9 @@
 }
 .container {
   background-color: #f8f8f8;
+  background-color: #fff;
   padding: 5px;
+}
+body {
+  height: 1000vh;
 }

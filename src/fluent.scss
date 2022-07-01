@@ -675,4 +675,63 @@
       }
     }
   }
+  &[type="image"] {
+    .persona-img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+// pivots
+.pivot {
+  .pivot-btns {
+    display: flex;
+    .pivot-btn {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+      line-height: 40px;
+      padding: 2px 8px;
+      font-size: 14px;
+      color: #201f1e;
+      cursor: pointer;
+      border: 0;
+      background-color: transparent;
+      font-weight: 400;
+      border-radius: 2px;
+      &:active {
+        background-color: #edebe9;
+      }
+      &.is-active {
+        font-weight: 700;
+      }
+      position: relative;
+      .mark {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: calc(100% - (8px * 2));
+        background-color: #0078d4;
+        transition: 0.2s ease-out;
+      }
+      &:hover {
+        background-color: #f3f2f1;
+        .mark {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .pivot-items {
+    .pivot-item {
+      display: none;
+      &.is-active {
+        display: block;
+      }
+    }
+  }
 }
