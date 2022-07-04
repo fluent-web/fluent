@@ -4,276 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fluent design</title>
-    <link rel="stylesheet" href="../src/fluent.min.css" />
+    <title>Itmo design</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="flexbox container" style="--wrap: wrap; --inner-spacing: 5px">
-      <button class="btn btn-primary">Primary</button>
-      <button class="btn btn-primary" disabled>Primary Disabled</button>
-    </div>
-    <div class="flexbox container" style="--wrap: wrap; --inner-spacing: 5px">
-      <button class="btn btn-secondary">Secondary</button>
-      <button class="btn btn-secondary" disabled>Secondary Disabled</button>
-    </div>
-    <div class="flexbox container" style="--wrap: wrap; --inner-spacing: 5px">
-      <button class="btn btn-text">Text</button>
-      <button class="btn btn-text" disabled>Text Disabled</button>
-    </div>
-    <div class="flexbox container" style="--wrap: wrap; --dir: column">
-      <p>Link: <a href="#" class="btn btn-link">Click here</a></p>
-      <p>
-        Disabled Link: <a href="#" class="btn btn-link" disabled>Click here</a>
-      </p>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="flexbox container" style="padding: 4px; --inner-div-spacing: 4px">
-      <div class="text-field search-box">
-        <input type="text" placeholder="Search" />
-      </div>
-      <div class="text-field search-box">
-        <input type="text" placeholder="Search" disabled />
-      </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="flexbox container" style="padding: 4px; --inner-div-spacing: 4px">
-      <div class="text-field">
-        <input type="text" placeholder="Search" />
-      </div>
-      <div class="text-field">
-        <input type="text" placeholder="Search" disabled />
-      </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="flexbox container" style="padding: 4px; --inner-div-spacing: 4px">
-      <div class="text-field has-prefix" prefix-text="https://">
-        <input type="text" name="" id="" placeholder="Placeholder" />
-      </div>
-      <div class="text-field has-prefix" prefix-text="https://">
-        <input type="text" name="" id="" placeholder="Placeholder" disabled />
-      </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="flexbox container" style="padding: 4px; --inner-div-spacing: 4px">
-      <div class="text-field has-suffix" suffix-text=".com">
-        <input type="text" name="" id="" placeholder="Placeholder" />
-      </div>
-      <div class="text-field has-suffix" suffix-text=".com">
-        <input type="text" name="" id="" placeholder="Placeholder" disabled />
-      </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="flexbox container" style="padding: 4px; --inner-div-spacing: 4px">
-      <div class="text-field has-prefix has-suffix" prefix-text="https://" suffix-text=".com">
-        <input type="text" name="" id="" placeholder="Placeholder" />
-      </div>
-      <div class="text-field has-prefix has-suffix" prefix-text="https://" suffix-text=".com">
-        <input type="text" name="" id="" placeholder="Placeholder" disabled />
-      </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px">
-      <div class="dropdown">
-        <button class="dropdown-btn">Dropdown</button>
-        <div class="dropdown-items">
-          <a href="#" class="dropdown-item">Item 1</a>
-          <a href="#" class="dropdown-item">Item 2</a>
-          <a href="#" class="dropdown-item">Item 3</a>
-          <a href="#" class="dropdown-item">Item 4</a>
-          <a href="#" class="dropdown-item">Item 5</a>
-          <a href="#" class="dropdown-item">Item 6</a>
-          <a href="#" class="dropdown-item">Item 7</a>
-          <a href="#" class="dropdown-item">Item 8</a>
-          <a href="#" class="dropdown-item">Item 9</a>
-          <a href="#" class="dropdown-item">Item 10</a>
-          <a href="#" class="dropdown-item">Item 11</a>
-          <a href="#" class="dropdown-item">Item 12</a>
-          <a href="#" class="dropdown-item">Item 13</a>
-          <a href="#" class="dropdown-item">Item 14</a>
-          <a href="#" class="dropdown-item">Item 15</a>
-          <a href="#" class="dropdown-item">Item 16</a>
-          <a href="#" class="dropdown-item">Item 17</a>
-          <a href="#" class="dropdown-item">Item 18</a>
-          <a href="#" class="dropdown-item">Item 19</a>
-          <a href="#" class="dropdown-item">Item 20</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropdown-btn" disabled>Dropdown</button>
-      </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <label class="toggle" toggle-label="Label">
-        <input type="checkbox">
-      </label>
-      <label class="toggle" toggle-label="Label">
-        <input type="checkbox" disabled>
-      </label>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <label class="toggle is-on" toggle-label="Label">
-        <input type="checkbox">
-      </label>
-      <label class="toggle is-on" toggle-label="Label">
-        <input type="checkbox" disabled>
-      </label>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <label class="checkbox" checkbox-label="String">
-        <input type="checkbox">
-      </label>
-      <label class="checkbox" checkbox-label="String">
-        <input type="checkbox" disabled>
-      </label>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <label class="checkbox" checkbox-label="String">
-        <input type="checkbox" checked>
-      </label>
-      <label class="checkbox" checkbox-label="String">
-        <input type="checkbox" checked disabled>
-      </label>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container" style="padding: 4px;">
-      <div class="radio-group">
-        <div class="radio" radio-label="Option 1">
-          <input name="radio" type="radio" checked>
-        </div>
-        <div class="radio" radio-label="Option 2">
-          <input name="radio" type="radio">
-        </div>
-        <div class="radio" radio-label="Option 3">
-          <input name="radio" type="radio" disabled>
-        </div>
-        <div class="radio" radio-label="Option 4">
-          <input name="radio" type="radio" checked disabled>
-        </div>
-      </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="text" text="H" status="online" size="xxx-sm"></div>
-      <div class="persona" type="text" text="VH" status="online" size="xx-sm"></div>
-      <div class="persona" type="text" text="VH" status="online" size="x-sm"></div>
-      <div class="persona" type="text" text="VH" status="online" size="sm"></div>
-      <div class="persona" type="text" text="VH" status="online" size="md"></div>
-      <div class="persona" type="text" text="VH" status="online" size="x-md"></div>
-      <div class="persona" type="text" text="VH" status="online" size="lg"></div>
-      <div class="persona" type="text" text="VH" status="online" size="x-lg"></div>
-      <div class="persona" type="text" text="VH" status="online" size="xx-lg"></div>
-      <div class="persona" type="text" text="VH" status="online" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="text" text="H" status="away" size="xxx-sm"></div>
-      <div class="persona" type="text" text="VH" status="away" size="xx-sm"></div>
-      <div class="persona" type="text" text="VH" status="away" size="x-sm"></div>
-      <div class="persona" type="text" text="VH" status="away" size="sm"></div>
-      <div class="persona" type="text" text="VH" status="away" size="md"></div>
-      <div class="persona" type="text" text="VH" status="away" size="x-md"></div>
-      <div class="persona" type="text" text="VH" status="away" size="lg"></div>
-      <div class="persona" type="text" text="VH" status="away" size="x-lg"></div>
-      <div class="persona" type="text" text="VH" status="away" size="xx-lg"></div>
-      <div class="persona" type="text" text="VH" status="away" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="text" text="H" status="busy" size="xxx-sm"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="xx-sm"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="x-sm"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="sm"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="md"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="x-md"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="lg"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="x-lg"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="xx-lg"></div>
-      <div class="persona" type="text" text="VH" status="busy" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="text" text="H" status="offline" size="xxx-sm"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="xx-sm"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="x-sm"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="sm"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="md"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="x-md"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="lg"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="x-lg"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="xx-lg"></div>
-      <div class="persona" type="text" text="VH" status="offline" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="xxx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="xx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="x-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="x-md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="x-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="xx-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="online" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="xxx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="xx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="x-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="x-md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="x-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="xx-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="away" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="xxx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="xx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="x-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="x-md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="x-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="xx-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="busy" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container flexbox" style="padding: 4px; --inner-div-spacing: 4px;">
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="xxx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="xx-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="x-sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="sm"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="x-md"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="x-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="xx-lg"></div>
-      <div class="persona" type="image" src="https://tse1.mm.bing.net/th?id=OIP.HLA2X8YnqX7t8AbZIqLQWAHaIR&pid=Api" status="offline" size="xxx-lg"></div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="container" style="padding: 4px;">
-      <div class="pivot">
-        <div class="pivot-btns">
-          <button class="pivot-btn is-active">My Files</button>
-          <button class="pivot-btn">Recent</button>
-          <button class="pivot-btn">Shared with me</button>
-        </div>
-        <div class="pivot-items">
-          <div class="pivot-item is-active">Items 1</div>
-          <div class="pivot-item">Items 2</div>
-          <div class="pivot-item">Items 3</div>
-        </div>
-      </div>
+    <div class="container scrolled">
+      <itmo-alert type="success" size="12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
+        molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
+        odio.
+      </itmo-alert>
+      <itmo-alert type="warning" size="12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
+        molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
+        odio.
+      </itmo-alert>
+      <itmo-alert type="error" size="12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
+        molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
+        odio.
+      </itmo-alert>
+      <itmo-alert type="info" size="12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
+        molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
+        odio.
+      </itmo-alert>
     </div>
     <script src="../src/fluent.js"></script>
   </body>

@@ -7,17 +7,17 @@
   --inner-spacing: 0;
   --inner-div-spacing: 0;
 }
-.flexbox * {
-  margin: var(--inner-spacing);
-}
-.flexbox div {
-  margin-right: var(--inner-div-spacing);
-}
 .container {
-  background-color: #f8f8f8;
   background-color: #fff;
   padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  grid-gap: 5px;
+  overflow-x: auto;
 }
 body {
   height: 1000vh;
+}
+adu {
+  align-items: stretch;
 }
