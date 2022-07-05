@@ -4,35 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Itmo design</title>
+    <title>flid design</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container scrolled">
-      <itmo-alert type="success" size="12">
+    <div class="container-grid">
+      <flid-alert type="success" size="12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
         voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
         molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
         odio.
-      </itmo-alert>
-      <itmo-alert type="warning" size="12">
+      </flid-alert>
+      <flid-alert type="warning" size="12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
         voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
         molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
         odio.
-      </itmo-alert>
-      <itmo-alert type="error" size="12">
+      </flid-alert>
+      <flid-alert type="error" size="12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
         voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
         molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
         odio.
-      </itmo-alert>
-      <itmo-alert type="info" size="12">
+      </flid-alert>
+      <flid-alert type="info" size="12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
         voluptate veniam illum eius obcaecati ut dignissimos libero ullam aut
         molestiae enim provident fugiat voluptas omnis, at dolor quod debitis
         odio.
-      </itmo-alert>
+      </flid-alert>
+    </div>
+    <div class="container">
+      <flid-badge type="rect" size="12">Badge</flid-badge>
+      <flid-badge type="rect" size="10">Badge</flid-badge>
+      <flid-badge type="oval" size="12">Badge</flid-badge>
+      <flid-badge type="oval" size="10">Badge</flid-badge><br />
+      <flid-badge type="oval" size="10">New</flid-badge>
+      <flid-badge type="oval" size="10" number-badge filled>10</flid-badge>
+    </div>
+    <!-- prettier-ignore -->
+    <div class="container">
+      <flid-button type="primary" size="14" is-link href="#" target="_self">Button</flid-button>
+      <flid-button type="secondary" size="14" is-link href="#" target="_self">Button</flid-button>
+      <flid-button type="text" size="14" is-link href="#" target="_self">Button</flid-button>
+      <flid-button type="grey" size="14" is-link href="#" target="_self">Button</flid-button>
+      <flid-button type="primary" size="12">Button</flid-button>
+      <flid-button type="secondary" size="12">Button</flid-button>
+      <flid-button type="text" size="12">Button</flid-button>
+      <flid-button type="grey" size="12">Button</flid-button><br>
+      <flid-button type="primary" size="14" is-link href="#" target="_self" disabled>Button</flid-button>
+      <flid-button type="secondary" size="14" is-link href="#" target="_self" disabled>Button</flid-button>
+      <flid-button type="text" size="14" is-link href="#" target="_self" disabled>Button</flid-button>
+      <flid-button type="grey" size="14" is-link href="#" target="_self" disabled>Button</flid-button>
+      <flid-button type="primary" size="12" disabled>Button</flid-button>
+      <flid-button type="secondary" size="12" disabled>Button</flid-button>
+      <flid-button type="text" size="12" disabled>Button</flid-button>
+      <flid-button type="grey" size="12" disabled>Button</flid-button>
     </div>
     <script src="../src/fluent.js"></script>
   </body>

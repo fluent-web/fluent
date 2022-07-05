@@ -8,6 +8,9 @@
   --inner-div-spacing: 0;
 }
 .container {
+  padding: 5px;
+}
+.container-grid {
   background-color: #fff;
   padding: 5px;
   display: grid;

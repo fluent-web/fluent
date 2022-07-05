@@ -43,7 +43,7 @@ var colors = {
   },
   other: {
     // blue
-    blueHover: "#1846C7",
+    blueHover: "#1640B6",
     blueActive: "#143AA4",
     // other
     deepSky: "#00C2FF",
@@ -67,12 +67,60 @@ document.head.insertAdjacentHTML(
 *::before, *::after {
   box-sizing: border-box;
 }
+flid-button[type="primary"] {
+  color: ${colors.base.white};
+  background-color: ${colors.primary.blue};
+}
+flid-button[type="primary"]:hover {
+  background-color: ${colors.other.blueHover};
+}
+flid-button[type="primary"]:active {
+  background-color: ${colors.other.blueActive};
+}
+flid-button[type="secondary"] {
+  color: ${colors.base.black};
+  background-color: ${colors.base.white};
+  border: 1px solid ${colors.grey.grey12};
+}
+flid-button[type="secondary"]:hover {
+  border-color: ${colors.grey.grey20};
+}
+flid-button[type="secondary"]:active {
+  background-color: ${colors.grey.grey4};
+}
+flid-button[type="text"] {
+  color: ${colors.primary.blue};
+  background-color: transparent;
+  border: none;
+}
+flid-button[type="text"]:hover {
+  color: ${colors.other.blueHover};
+  background-color: ${colors.primary.blue8};
+}
+flid-button[type="text"]:active {
+  background-color: ${colors.primary.blue24}
+}
+flid-button[type="grey"] {
+  color: ${colors.base.black};
+  background-color: ${colors.grey.grey8};
+  border: none;
+}
+flid-button[type="grey"]:hover {
+  background-color: ${colors.grey.grey12};
+}
+flid-button[type="grey"]:active {
+  background-color: ${colors.grey.grey20}
+}
+flid-button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
 </style>
 `
 );
 // MAIN DESIGN
 /* alert */
-document.querySelectorAll("itmo-alert").forEach((alert) => {
+document.querySelectorAll("flid-alert").forEach((alert) => {
   var size = alert.getAttribute("size");
   var styled = alert.style;
   switch (alert.getAttribute("type")) {
@@ -153,4 +201,81 @@ document.querySelectorAll("itmo-alert").forEach((alert) => {
   // icon style
   var icon = alert.querySelector(".icon");
   icon.style.display = "block";
+});
+// badge
+document.querySelectorAll("flid-badge").forEach((badge) => {
+  var styled = badge.style;
+  var type = badge.getAttribute("type");
+  var size = badge.getAttribute("size");
+  styled.cursor = "default";
+  styled.display = "inline-block";
+  styled.backgroundColor = colors.primary.blue8;
+  styled.color = colors.primary.blue;
+  styled.fontWeight = "600";
+  styled.fontSize = size + "px";
+  styled.padding = `3px ${size}px`;
+  styled.textAlign = "center";
+  styled.transition = ".06s ease";
+  switch (type) {
+    case "rect": {
+      styled.borderRadius = size / 3 + "px";
+      break;
+    }
+    case "oval": {
+      styled.borderRadius = badge.offsetHeight + "px";
+      break;
+    }
+  }
+  // hover style
+  badge.addEventListener("mouseover", function () {
+    this.style.backgroundColor = colors.primary.blue;
+    this.style.color = colors.base.white;
+  });
+  badge.addEventListener("mouseleave", function () {
+    this.style.backgroundColor = colors.primary.blue8;
+    this.style.color = colors.primary.blue;
+  });
+});
+document.querySelectorAll("flid-badge[number-badge]").forEach((badge) => {
+  var size = badge.getAttribute("size");
+  var styled = badge.style;
+  styled.height = styled.width = size * 2 + "px";
+  styled.padding = 0;
+  styled.display = "flex";
+  styled.alignItems = "center";
+  styled.justifyContent = "center";
+});
+document.querySelectorAll("flid-badge[filled]").forEach((badge) => {
+  var styled = badge.style;
+  styled.backgroundColor = colors.primary.blue;
+  styled.color = colors.base.white;
+  badge.addEventListener("mouseleave", function () {
+    styled.backgroundColor = colors.primary.blue;
+    styled.color = colors.base.white;
+  });
+});
+// button
+document.querySelectorAll("flid-button").forEach((btn) => {
+  var type = btn.getAttribute("type");
+  var size = btn.getAttribute("size");
+  var styled = btn.style;
+  if (btn.hasAttribute("is-link") == true) {
+    styled.cursor = "pointer";
+    btn.addEventListener("click", function () {
+      window.open(btn.getAttribute("href"), btn.getAttribute("target"));
+    });
+  } else if (btn.hasAttribute("is-link") == false) {
+    styled.cursor = "default";
+    btn.addEventListener("click", function () {
+      return;
+    });
+  }
+  styled.transition = ".13s ease";
+  styled.display = "inline-block";
+  styled.userSelect = "none";
+  styled.fontSize = size + "px";
+  styled.padding = `${size / 1.7}px ${(size / 2) * 3}px`;
+  styled.fontWeight = "500";
+  styled.lineHeight = "1";
+  styled.borderRadius = size / 2.5 + "px";
 });
